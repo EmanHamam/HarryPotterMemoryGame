@@ -1,4 +1,4 @@
-# Memory Game
+# Harry Potter Memory Game
 
 A TypeScript-based interactive memory card game built with modern web technologies.
 
