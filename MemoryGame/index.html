@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harry Potter Memory Game</title>
+  <meta
+    name="description"
+    content="A magical Harry Potter themed memory matching game. Flip cards, match wizard pairs, and prove your wizarding mind."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="starfield"></div>
+
+    <div class="container">
+      <div class="title-wrap">
+        <div class="badge">✨ Hogwarts School of Witchcraft</div>
+        <h1 class="gold-text">Wizarding Memory</h1>
+        <p class="subtitle">Match the magical pairs to prove your wizarding mind.</p>
+      </div>
+
+      <div class="glass hud">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-icon">🪄</div>
+            <div>
+              <div class="stat-label">Moves</div>
+              <div class="stat-value" id="moves">0</div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-icon">🏆</div>
+            <div>
+              <div class="stat-label">Matches</div>
+              <div class="stat-value" id="matches">0/6</div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-icon">⏱</div>
+            <div>
+              <div class="stat-label">Time</div>
+              <div class="stat-value" id="time">00:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-actions">
+          <button class="btn-ghost" id="soundBtn" aria-label="Toggle sound">🔊</button>
+          <button class="btn-gold" id="restartBtn">↻ Restart</button>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="grid" id="gameGrid"></div>
+    </div>
+
+    <div class="modal" id="winModal">
+      <div class="glass modal-card">
+        <div class="trophy-circle">🏆</div>
+        <h2 class="gold-text">Spellbinding!</h2>
+        <p id="winText">You matched all pairs.</p>
+        <button class="btn-gold" id="playAgainBtn">↻ Play Again</button>
+      </div>
+    </div>
+  </main>
+<!-- <img src="images/dobby.jpg" alt=""> -->
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
